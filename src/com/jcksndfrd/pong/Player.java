@@ -12,6 +12,10 @@ public class Player extends GameObject {
     }
 
     public void tick() {
+        setVelY(0);
+        if(movingUp) velY -= 5;
+        if(movingDown) velY += 5;
+
         if(velY > 0) y += Math.min(velY, Game.HEIGHT - y - height / 2);
         if(velY < 0) y += Math.max(velY, height / 2 - y);
     }

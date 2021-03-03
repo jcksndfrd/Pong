@@ -19,13 +19,11 @@ public class KeyInput extends KeyAdapter {
             GameObject tempObject = handler.objects.get(i);
 
             if(tempObject.id == ID.PLAYER1) {
-                if(key == KeyEvent.VK_W) tempObject.setVelY(-5);
-                if(key == KeyEvent.VK_S) tempObject.setVelY(5);
-            }
-
-            if(tempObject.id == ID.PLAYER2) {
-                if(key == KeyEvent.VK_UP) tempObject.setVelY(-5);
-                if(key == KeyEvent.VK_DOWN) tempObject.setVelY(5);
+                if(key == KeyEvent.VK_W) tempObject.setMovingUp(true);
+                if(key == KeyEvent.VK_S) tempObject.setMovingDown(true);
+            } else if(tempObject.id == ID.PLAYER2) {
+                if(key == KeyEvent.VK_UP) tempObject.setMovingUp(true);
+                if(key == KeyEvent.VK_DOWN) tempObject.setMovingDown(true);
             }
         }
     }
@@ -38,13 +36,11 @@ public class KeyInput extends KeyAdapter {
             GameObject tempObject = handler.objects.get(i);
 
             if(tempObject.id == ID.PLAYER1) {
-                if(key == KeyEvent.VK_W) tempObject.setVelY(0);
-                if(key == KeyEvent.VK_S) tempObject.setVelY(0);
-            }
-
-            if(tempObject.id == ID.PLAYER2) {
-                if(key == KeyEvent.VK_UP) tempObject.setVelY(0);
-                if(key == KeyEvent.VK_DOWN) tempObject.setVelY(0);
+                if(key == KeyEvent.VK_W) tempObject.setMovingUp(false);
+                if(key == KeyEvent.VK_S) tempObject.setMovingDown(false);
+            } else if(tempObject.id == ID.PLAYER2) {
+                if(key == KeyEvent.VK_UP) tempObject.setMovingUp(false);
+                if(key == KeyEvent.VK_DOWN) tempObject.setMovingDown(false);
             }
         }
     }

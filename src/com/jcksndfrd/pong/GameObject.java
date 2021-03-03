@@ -7,6 +7,7 @@ public abstract class GameObject {
     protected int x, y;
     protected int velX, velY;
     protected int width, height;
+    protected boolean movingUp, movingDown;
     protected ID id;
 
     protected GameObject(int x, int y, ID id) {
@@ -47,5 +48,11 @@ public abstract class GameObject {
     }
     public int getVelY() {
         return velY;
+    }
+    public void setMovingUp(boolean movingUp) {
+        this.movingUp = movingUp;
+    }
+    public void setMovingDown(boolean movingDown) {
+        this.movingDown = movingDown;
     }
 }
