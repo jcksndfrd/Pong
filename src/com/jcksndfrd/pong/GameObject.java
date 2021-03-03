@@ -6,6 +6,7 @@ public abstract class GameObject {
 
     protected int x, y;
     protected int velX, velY;
+    protected int width, height;
     protected ID id;
 
     protected GameObject(int x, int y, ID id) {

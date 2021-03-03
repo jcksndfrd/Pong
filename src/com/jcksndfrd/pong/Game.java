@@ -17,10 +17,11 @@ public class Game extends Canvas implements Runnable {
 
     public Game() {
         handler = new Handler();
+        this.addKeyListener(new KeyInput(handler));
         
         new Window(WIDTH, HEIGHT, "Jack's Pong", this);
 
-        handler.addObject(new Player(0, 0, ID.PLAYER1));
+        handler.addObject(new Player(32, HEIGHT / 2, ID.PLAYER1));
     }
 
 	public void start() {
