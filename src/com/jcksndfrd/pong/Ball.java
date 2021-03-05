@@ -11,7 +11,7 @@ public class Ball extends GameObject {
         height = 32;
 
         velX = 7;
-        velY = 7;
+        velY = 3;
     }
 
     public void tick(){
@@ -31,5 +31,6 @@ public class Ball extends GameObject {
         x = Game.WIDTH / 2;
         y = Game.HEIGHT / 2;
         velX *= -1;
+        velY = -3;
     }
 }

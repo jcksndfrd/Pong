@@ -23,6 +23,22 @@ public class Handler {
                         }
                     }
                 }
+            } else if(tempObject.id == ID.PLAYER2 && Game.BOT) {
+                for(int j = 0; j < objects.size(); j++) {
+                    GameObject otherObject = objects.get(j);
+                    if(otherObject.id == ID.BALL) {
+                        if(tempObject.y - tempObject.height / 3 > otherObject.y) {
+                            tempObject.setMovingUp(true);
+                            tempObject.setMovingDown(false);
+                        } else if(tempObject.y + tempObject.height / 3 < otherObject.y) {
+                            tempObject.setMovingUp(false);
+                            tempObject.setMovingDown(true);
+                        } else {
+                            tempObject.setMovingUp(false);
+                            tempObject.setMovingDown(false);
+                        }
+                    }
+                }
             }
 
             tempObject.tick();

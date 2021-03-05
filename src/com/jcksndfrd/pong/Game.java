@@ -11,6 +11,8 @@ public class Game extends Canvas implements Runnable {
 
     public static final int WIDTH = 1600, HEIGHT = WIDTH / 16 * 9;
 
+    public static final boolean BOT = true;
+
     private Thread thread;
     private boolean running = false;
     private Handler handler;
