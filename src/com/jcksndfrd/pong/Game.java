@@ -23,7 +23,7 @@ public class Game extends Canvas implements Runnable {
 
         handler.addObject(new Player(32, HEIGHT / 2, ID.PLAYER1));
         handler.addObject(new Player(WIDTH - 32, HEIGHT / 2, ID.PLAYER2));
-        // handler.addObject(new Ball(WIDTH / 2, HEIGHT / 2, ID.BALL));
+        handler.addObject(new Ball(WIDTH / 2, HEIGHT / 2, ID.BALL));
     }
 
 	public void start() {
